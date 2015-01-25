@@ -24,6 +24,7 @@ class TwitterOAuth{
     function friends($count=20){
         return $friends_list = $this->get("https://api.twitter.com/1.1/friendships/list.json?count=$count");
     }
+
     function homeTimeLine($count=20, $since_id=0){
         if($since_id == 0){
             $timeline = $this-get("https://api.twitter.com/1.1/statuses/home_timeline.json?count=$count");
