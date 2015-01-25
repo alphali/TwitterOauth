@@ -1,10 +1,13 @@
 <?php
 class TwitterOAuth{
+    private $consumer_key = 'your consumer_key';
+    private $consumer_secret = 'your secret';
 
     function accessTokenURL()  { return 'https://api.twitter.com/oauth/access_token'; }
     function authenticateURL() { return 'https://api.twitter.com/oauth/authenticate'; }
     function authorizeURL()    { return 'https://api.twitter.com/oauth/authorize'; }
     function requestTokenURL() { return 'https://api.twitter.com/oauth/request_token'; }
+
     function follow($user_id=null, $user_name=null){
         $data = array('follow' => 'true');
         if($user_id){
@@ -37,7 +40,6 @@ class TwitterOAuth{
         return $timeline;
     }
 
-    //get pin number to auto-login
     function getPin($url, $otoken=null){
         $parameters = array();
         $url = RequestProxy::getUrl($url);
