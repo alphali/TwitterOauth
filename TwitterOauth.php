@@ -5,7 +5,6 @@ class TwitterOAuth{
     function authenticateURL() { return 'https://api.twitter.com/oauth/authenticate'; }
     function authorizeURL()    { return 'https://api.twitter.com/oauth/authorize'; }
     function requestTokenURL() { return 'https://api.twitter.com/oauth/request_token'; }
-
     function follow($user_id=null, $user_name=null){
         $data = array('follow' => 'true');
         if($user_id){
