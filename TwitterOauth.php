@@ -66,9 +66,9 @@ class TwitterOAuth{
                 "Referer:https://api.twitter.com/oauth/authenticate?oauth_token=$otoken",
                 "User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0",
                 ));
-    $url = "https://twitter.com/intent/sessions";
-    $url = RequestProxy::getUrl($url);
-    $resp = $http->post($url, $data);
+        $url = "https://twitter.com/intent/sessions";
+        $url = RequestProxy::getUrl($url);
+        $resp = $http->post($url, $data);
   }
 
 }
